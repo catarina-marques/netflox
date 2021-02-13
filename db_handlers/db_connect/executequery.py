@@ -6,7 +6,7 @@ def create_connection():
     connection = psycopg2.connect(user="postgres",
                                   password="postgres",
                                   host="localhost",
-                                  port="5432",
+                                  port="****",
                                   database="netflox")
     return connection
 
