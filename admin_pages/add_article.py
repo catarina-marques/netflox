@@ -1,8 +1,6 @@
 def main(result):
     from db_handlers import db_article
     from db_handlers import db_price
-    from db_handlers import db_stock
-    from db_handlers import db_duration
     from admin_pages import admin_homepage
     from . import manage_articles
     import loggedin
