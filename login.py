@@ -32,9 +32,7 @@ def mainlog():
                 client_id = db_handlers.get_user(result)
                 client = db_handlers.get_user_overview(client_id)
                 client_name = client[1]
-                conn = psycopg2.connect(host="localhost", dbname="netflox", user="postgres", password="postgres")
-                cur = conn.cursor()
-                client_homepage.menuCliente(client_name, result, conn, cur)
+                #client_homepage.main(result)
                 break
 
 
