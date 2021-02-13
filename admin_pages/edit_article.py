@@ -117,22 +117,26 @@ def select_opt_add_details(buttonpressed2, result):
     if buttonpressed2 == '1':
         print("Actor")
         new_actor = input()
+        print("To do.")
         admin_pages.main(result)
 
 
     elif buttonpressed2 == '2':
         print("Director")
         new_director = input()
+        print("To do.")
         admin_pages.main(result)
 
     elif buttonpressed2 == '3':
         print("Producer")
         new_producer = input()
+        print("To do.")
         admin_pages.main(result)
 
     elif buttonpressed2 == '4':
         print("Genre")
         new_genre = input()
+        print("To do.")
         admin_pages.main(result)
 
     elif buttonpressed2 == '5':
@@ -141,7 +145,7 @@ def select_opt_add_details(buttonpressed2, result):
 
 
     else:
-        print("bad option. try again")
+        print("Bad option. Try again")
         select_opt_add_details()
     admin_pages.admin_homepage(result)
 
