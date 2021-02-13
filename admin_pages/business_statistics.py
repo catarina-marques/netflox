@@ -40,9 +40,9 @@ def all_time(result):
     list = db_rent.get_article_rent_overview()
     sum = 0
     for rent in list:
-        # this would print a list of all sales
+        # list of all sales
         print("Purchase date: " + str(rent[1]) + " Price: " + str(rent[2]))
-        # but i want a sum of all prices in that list
+        # sum of all prices in that list
         sum += rent[2]
 
 
@@ -73,54 +73,8 @@ def by_timeframe(result):
     moneymade = db_rent.get_rent_by_timeframe(start_day,start_month,start_year,end_day,end_month,end_year)
     print('We made ' + str(moneymade[0]) + " euros between " + start_day + "-" + start_month + "-" + start_year + " and " + end_day + "-" + end_month + "-" + end_year)
 
-    # if db_rent.check_if_rent_exists():
-    #     from db_handlers import db_rent
-    #     list = db_rent.get_article_rent_overview()
-    #     for rent in list:
-    #         import datetime
-    #         current_month = datetime.datetime.now().month
-    #         month = rent[1]#except i only want the month field here
-    #
-    #         if current_month == month:
-    #             # this would print a list of all sales of that article
-    #             print("Id: " + rent[0] + "Purchase Date: " + str(rent[1]) + " Price: " + str(rent[2]))
-    #             # but i want a sum of all prices in that list
-    #             sum += sum + rent[2]
-    #             print("Total revenue of last month: " + sum + " euros.")
-    # else:
-    #     print("Couldn't find sales. Returning to homepage.")
-    #     from admin_pages import main
-    #     admin_homepage.main(result)
-
     print("Returning to homepage.")
     admin_homepage.main(result)
-
-
-
-# def by_year(result):
-#     print("Last year sales:")
-#     from db_handlers import db_rent
-#     if db_rent.check_if_rent_exists():
-#         from db_handlers import db_rent
-#         list = db_rent.get_article_rent_overview()
-#         for rent in list:
-#             import datetime
-#             current_year = datetime.datetime.now().year
-#             year = rent[1]  # except i only want the month field here
-#
-#             if current_year == year:
-#                 # this would print a list of all sales of that article
-#                 print("Id: " + rent[0] + "Purchase Date: " + str(rent[1]) + " Price: " + str(rent[2]))
-#                 # but i want a sum of all prices in that list
-#                 sum += sum + rent[2]
-#                 print("Total revenue of last month: " + sum + " euros.")
-#     else:
-#         print("Couldn't find rents with that article. Returning to homepage.")
-#         from admin_pages import main
-#         admin_homepage.main(result)
-#
-#     print("Returning to homepage.")
-#     admin_homepage.main(result)
 
 
 def by_article(result):
