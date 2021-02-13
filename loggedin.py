@@ -1,0 +1,1 @@
+currentuser=0
